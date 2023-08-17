@@ -1,0 +1,494 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", "sans-serif";
+}
+
+h1 {
+  font-size: 40px;
+  color: black;
+  font-family: "Open Sans", "sans-serif";
+}
+hr {
+  border: 2px solid #f0d390;
+  margin-top: 2%;
+}
+.navigation ul li a {
+  color: black;
+  transition: font-size 0.1s linear 0.1s;
+}
+.navigation ul li a:hover {
+  font-size: 20px;
+  border-bottom: 2px solid #f2bf5a;
+}
+.main {
+  margin:0 auto;
+  text-align: center;
+  background-color: #edf5ef;
+  padding-top: 2px;
+}
+@media screen and (max-width: 750px) {
+  .main {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 100px;
+}
+
+@media screen and (max-width: 750px) {
+  .navigation ul li a {
+    display: none;
+    position: relative;
+  }
+  .services img {
+    height: 175px;
+    width: 200px;
+  }
+  .services h4 {
+    font-size: 20px;
+    cursor: pointer;
+    color: #1738898f;
+  }
+  h2 {
+    padding-top: 20px;
+    font-size: 32px;
+    color: #1b7c6f82;
+  }
+
+  .navigation .openbtn {
+    margin-right: auto;  
+    position: absolute;
+    color: white;
+    background-color: #19625a6b;
+    box-shadow: .5px 3px 3px 5px white;
+  }
+  h1 {
+    color: whitesmoke;
+  }
+  p {
+    color: #cad0db;
+  }
+  
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #b61924;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/*  Headder  */
+.headder {
+  background-image: url("/main/static/main/img/thore.svg");
+  background-repeat: no-repeat;
+  background-size: 160% 100%;
+  background-color: #a9c4aa;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5%;
+  text-align: left;
+  padding-top: 100px;
+}
+
+.headder ul {
+  display: flex;
+  justify-content: space-around;
+}
+.right-headder {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+.right-headder img {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 750px) {
+  .headder {
+    background-image: url("/main/static/main/img/thore.svg");
+    background-repeat: no-repeat;
+    background-size: 150% 100%;
+    background-color: #28725e99;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5%;
+    text-align: left;
+    padding-top: 100px;
+  }
+
+  .right-headder {
+    height: auto;
+    width: auto;
+    object-fit: cover;
+  }
+}
+.headder .left-headder {
+  text-align: left;
+}
+
+/*   Headder end  */
+
+input {
+  border: 3px solid #1b5248;
+  margin-top: 2%;
+  height: 45px;
+  width: 350px;
+}
+
+.contact-left input:first-child {
+  margin-top: 7%;
+}
+
+textarea {
+  border: 4px solid #1b5248;
+  margin-top: 2%;
+  height: 150px;
+  width: 350px;
+}
+.contact {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2%;
+}
+
+button {
+  margin-top: 2%;
+  width: 200px;
+  height: 30px;
+  background-color: #1b5248;
+  text-align: center;
+  color: white;
+  border: 2px solid #09362d;
+}
+
+.contact .contact-left button:hover {
+  width: 250px;
+  height: 45px;
+  transition: 0.2s linear;
+  border: 2px solid #09362d;
+}
+.contact-left {
+  width: 50%;
+  height: 400px;
+}
+.contact-items img:hover {
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  .contact-left {
+    width: 100%;
+  }
+  .contact-right ul li a {
+    font-size: 10px;
+  }
+  .real-projects {
+    width: 300px;
+    height: 450px;
+    margin: 2% auto;
+  }
+  .projects {
+    text-align: center;
+  }
+}
+.contact-right {
+  text-align: left;
+}
+
+.contact-right ul li {
+  padding-top: 20px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.contact-right ul li a {
+  font-size: 18px;
+  color: #1b5248;
+  text-decoration: none;
+}
+
+.contact-right ul li:hover {
+  text-decoration: underline;
+  border-bottom: 4px solid #9ee6d7;
+}
+
+/* Projects */
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+  padding: 20px;
+}
+
+.project-services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 750px) {
+  .project-services {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-services div {
+    margin-top: 5%;
+  }
+  .project-services div:first-child {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .projects {
+    flex-direction: column;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-right ul li a {
+    font-size: 20px;
+  }
+  .hr-lines:after {
+    content: "   ";
+    display: none;
+  }
+
+  .hr-lines:before {
+    content: "   ";
+    display: none;
+  }
+  .blog-left h2 {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+}
+
+.blog {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+}
+.blog-left h2 a {
+  color: #3c8aa699;
+}
+.fakeimage {
+  width: 250px;
+  height: 200px;
+}
+.fakeimage img,
+.services img {
+  box-shadow: 2px 10px 10px 2px #6fb0c1;
+}
+
+.real-projects {  
+  box-shadow: 0 10px 10px 5px #28725e99;
+}
+
+.contact-social  {
+  display: flex;
+  margin-top: 3%;
+  justify-content: flex-end;
+ 
+}
+.contact-items {
+  display: flex;
+  padding: 0;
+}
+.contact-items li:nth-child(2) {
+  padding-left: 25px;
+}
+.contact-items li:nth-child(3) {
+  padding-left: 25px;
+}
+
+@media screen and (max-width: 750px) {
+  .contact-social {
+    margin-top: -5%;
+   
+    
+    flex-direction: row-reverse;
+  }
+  .headder div p {
+    margin-top: 25%;
+    font-size: 18px;
+  }
+  .contact-items {
+    display: flex;
+    padding: 0;
+  }
+  .contact-items li:nth-child(2) {
+    padding-left: 15px;
+  }
+  .contact-items li:nth-child(3) {
+    padding-left: 15px;
+  }
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color    :#016f58d4;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 22px 24px 30px 177px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: ghostwhite;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 48px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+@media screen and (min-width: 750px) {
+  .openbtn {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  .navigation {
+    position: relative;
+    padding-left: 150px;
+  }
+  .openbtn {
+    font-size: 20px;
+    margin-right: -100%;
+    font-size: 22px;
+    cursor: pointer;
+  
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  
+    border: none;
+    width: 20%;
+  }
+  .real-projects h4 {
+    font-size: 28px;
+    background-color: #0d6b6e36;
+    width: 90%;
+  }
+  .real-projects p {
+    font-size: 20px;
+    color: black;
+  }
+  .real-projects a {
+    font-size: 20px;
+
+    color: darkseagreen;
+  }
+  .real-projects a:hover {
+    font-size: 24px;
+  }
+}
+
+.openbtn:hover {
+  background-color: #132e14;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+b{
+  color: #63969a;
+}
+
+@media screen and (max-width: 750px){
+
+  .b-line{
+    color: rgb(224, 172, 117);
+    font-size: x-large;
+   }
+   .social-app{
+    background-color: rgb(227 255 251 / 51%);
+    height: auto;
+    width: auto;
+    padding: 5px;
+   
+  }
+
+} 
+
+.social-app{
+ 
+  height: auto;
+  width: auto;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+.hugge{
+  font-size: x-large;
+}

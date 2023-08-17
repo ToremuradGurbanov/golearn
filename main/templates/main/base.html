@@ -1,0 +1,191 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&display=swap"
+    rel="stylesheet"
+  />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'main/style/style.css' %}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   
+    <link rel="icon" type="image/png" href="#"/>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&display=swap");
+
+      .headder {
+        background-image: url('{% static "main/img/thore.svg" %}');
+      }
+    </style>
+
+    <title>Web Development | Portfolio</title>
+  </head>
+  <body>
+    <!-- SideBar -->
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="{% url 'homepage' %}">About</a>
+      <a href="https://www.linkedin.com/in/toremuradgurbanov/" id="work_br">Work</a>
+      <a href="https://www.linkedin.com/in/toremuradgurbanov/" id="blog_br">Blog</a>
+      <a href="https://www.linkedin.com/in/toremuradgurbanov/" id="contact_br">Contact</a>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="{% url 'homepage' %}"> <strong> Home </strong> </a>
+          </li>
+          <li>
+            <a href="{% url 'homepage' %}"> <strong> About </strong> </a>
+          </li>
+          <li>
+            <a href="" id="work_br_1"> <strong> Work </strong> </a>
+          </li>
+          <li>
+            <a href="/" id="blog_br_1"> <strong> Blog </strong> </a>
+          </li>
+          <li>
+            <a id="contact_br_1" href=""> <strong> Contact </strong> </a>
+          </li>
+
+          <li><button class="openbtn" onclick="openNav()">&#9776;</button></li>
+        </ul>
+      </div>
+
+      {% block content %} {% endblock %}
+
+      <!-- Projects section -->
+
+      {% block projects %} {% endblock projects %} {% block blog %}
+      <span></span>
+      {% endblock blog %}
+
+      <h2 class="hr-lines" style="padding-top: 5%; padding-bottom: 5%;"> < Services /></h2>
+ 
+      <div class="project-services">
+        <div  class="services">
+          <img
+            width="100px"
+            height="100px"
+            src="{% static 'main/img/usability.png' %}"
+            alt="design services logo"
+          />
+         
+          <h4>Design your website</h4>
+        </div>
+        <div class="services">
+          <img
+            width="100px"
+            height="100px"
+            src="{% static 'main/img/development.png' %}"
+            alt="settings services logo"
+          />
+          
+          <h4>Development & Deployment</h4>
+        </div>
+        <div class="services">
+          <img
+            width="100px"
+            height="100px"
+            alt="development design logo"
+            src="{% static 'main/img/time.png' %}"
+          />
+         
+          <h4>Delivering on Time.</h4>
+        </div>
+      </div>
+
+      <!-- Contact Me section -->
+      <h2 name="contact_br" class="hr-lines">Contact Me!</h2>
+      <div name="contact_br_1"></div>
+      <div class="contact">
+        <div class="contact-left">
+          <form method="POST" action='{% url "homepage" %}'>
+            {% csrf_token %}
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              required
+              placeholder="Your Name"
+            />
+            <label for="firstname"></label><br />
+
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              required
+              placeholder="Your Surname"
+            />
+            <label for="lastname"></label><br />
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Your Email address"
+            />
+            <label for="email"></label><br />
+
+            <textarea
+              type="text"
+              name="message"
+              required
+              id="message"
+              placeholder="your message"
+            >
+						message
+				</textarea
+            >
+            <br />
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var i = 0,
+        text;
+      text = "A Web Developer.";
+      function typing() {
+        if (i < text.length) {
+          document.getElementById("text").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typing, 90);
+        }
+      }
+      typing();
+    </script>
+
+    <script type="text/javascript">
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "99%";
+        
+      }
+
+      /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        
+      }
+    </script>
+  </body>
+</html>

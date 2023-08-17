@@ -1,0 +1,103 @@
+{% extends 'main/base.html' %} {% load static %} {% block content %}
+<div class="headder">
+  <div class="left-headder">
+    <h1><strong> Hi! </strong></h1>
+    <h1>
+      <strong>
+        I Am <br />
+        <div id="text"></div
+      ></strong>
+      
+    </h1>
+
+    <p>
+         <b class="hugge b-line">Web</b> Designer | Developer | Specialist  <br/>
+              Assisting | Mentoring <br>
+              Desktop | <b class="hugge b-line">Web</b> Applications  
+    </p>
+    <div class="contact-social">
+      <ul class="contact-items">
+        <div class="social-app">
+        <li>
+          <a href="https://www.linkedin.com/in/toremuradgurbanov/">
+            <img
+              height="30px"
+              width="30px"
+              src="{% static 'main/img/facebook.png' %}"
+              alt="this is facebook logo"
+            />
+          </a>
+        </li>
+      </div>
+      <div class="social-app">
+        <li>
+          <a href="https://www.linkedin.com/in/toremuradgurbanov/">
+            <img
+              height="30px"
+              width="30px"
+              src="{% static 'main/img/instagram-logo.png' %}"
+              alt="this is messanger logo"
+            />
+          </a>
+        </li>
+      </div>
+      <div class="social-app">
+        <li>
+          <a href="https://www.linkedin.com/in/toremuradgurbanov/">
+            <img
+              height="30px"
+              width="30px"
+              src="{% static 'main/img/twitter.png' %}"
+              alt="this is messanger logo"
+            />
+          </a>
+        </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <div class="right-headder"></div>
+</div>
+
+{% endblock content %} {% block projects %}
+<h2 class="hr-lines"> ~ Projects ~</h2>
+<div class="works">
+  <div class="projects">
+    {% for project in projects %}
+    <div class="real-projects">
+      <img class="fakeimage" src="{{project.image.url}}" />
+      <h4>{{ project.title }}</h4>
+      <p>
+        Used tech: <br />
+        {{project.used_tech}}
+      </p>
+
+      <a href="https://www.linkedin.com/in/toremuradgurbanov/">Learn more..</a>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+{% endblock projects %} {% block blog %}
+<h2 class="hr-lines">< The Blog /></h2>
+
+<!-- Blog section -->
+<section class="blog-section">
+  {% for blog in blogs %}
+  <div class="blog">
+    <div class="blog-right">
+      <h3>Date: {{blog.date}}</h3>
+      <div class="fakeimage">
+        <img class="fakeimage" src="{{blog.image.url}}" />
+      </div>
+    </div>
+    <div class="blog-left">
+      <h2><a href="https://kinsta.com/blog/python-tutorials/">{{ blog.title }} </a></h2>
+    </div>
+
+    <br /><br /><br />
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock blog %}
